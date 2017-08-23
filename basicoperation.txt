@@ -1,0 +1,99 @@
+Pan Qi@DESKTOP-2ACL3RD MINGW64 /e/data processing results/Matlab/Git
+$ git init
+Initialized empty Git repository in E:/data processing results/Matlab/Git/.git/
+
+Pan Qi@DESKTOP-2ACL3RD MINGW64 /e/data processing results/Matlab/Git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        hello.m
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Pan Qi@DESKTOP-2ACL3RD MINGW64 /e/data processing results/Matlab/Git (master)
+$ git add hello.m
+
+Pan Qi@DESKTOP-2ACL3RD MINGW64 /e/data processing results/Matlab/Git (master)
+$ git commit hello.m -m "init"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Pan Qi@DESKTOP-2ACL3RD.(none)')
+
+Pan Qi@DESKTOP-2ACL3RD MINGW64 /e/data processing results/Matlab/Git (master)
+$ git config --global user.email "qipan0522@163.com"
+
+Pan Qi@DESKTOP-2ACL3RD MINGW64 /e/data processing results/Matlab/Git (master)
+$ git config --global user.name "qipan"
+
+Pan Qi@DESKTOP-2ACL3RD MINGW64 /e/data processing results/Matlab/Git (master)
+$ git commit hello.m -m "init"
+[master (root-commit) 0e743c1] init
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.m
+
+Pan Qi@DESKTOP-2ACL3RD MINGW64 /e/data processing results/Matlab/Git (master)
+$ git remote add origin https://github.com/qipan0522/Test.git
+
+Pan Qi@DESKTOP-2ACL3RD MINGW64 /e/data processing results/Matlab/Git (master)
+$ git push origin master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 212 bytes | 212.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/qipan0522/Test.git
+ * [new branch]      master -> master
+
+Pan Qi@DESKTOP-2ACL3RD MINGW64 /e/data processing results/Matlab/Git (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   hello.m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Pan Qi@DESKTOP-2ACL3RD MINGW64 /e/data processing results/Matlab/Git (master)
+$ git diff hello.m
+diff --git a/hello.m b/hello.m
+index 79bad90..55744eb 100644
+--- a/hello.m
++++ b/hello.m
+@@ -1 +1 @@
+-disp('hello');
+\ No newline at end of file
++disp('hello world');
+\ No newline at end of file
+
+Pan Qi@DESKTOP-2ACL3RD MINGW64 /e/data processing results/Matlab/Git (master)
+$ git add hello.m
+
+Pan Qi@DESKTOP-2ACL3RD MINGW64 /e/data processing results/Matlab/Git (master)
+$ git commit hello.m -m "add world"
+[master 4c52863] add world
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Pan Qi@DESKTOP-2ACL3RD MINGW64 /e/data processing results/Matlab/Git (master)
+$ git push origin master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 252 bytes | 252.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/qipan0522/Test.git
+   0e743c1..4c52863  master -> master
+
+Pan Qi@DESKTOP-2ACL3RD MINGW64 /e/data processing results/Matlab/Git (master)
+$
